@@ -1,0 +1,10 @@
+<view class="flip-container {{flip}}" touchstart="this.classList.toggle('hover');" bindtap='flipTap'>
+	<view class="flipper">
+		<view class="{{front}}">
+			<image src='../../images/front.jpg'></image>
+		</view>
+		<view class="{{back}}">
+			<image src='../../images/back.jpg'></image>
+		</view>
+	</view>
+</view>
