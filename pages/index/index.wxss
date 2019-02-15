@@ -34,8 +34,8 @@
 	backface-visibility: hidden;
 
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 180;
+	left: 180;
 }
 
 /* front pane, placed above back */
@@ -46,4 +46,16 @@
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+}
+
+image[class*="gif-"]{
+  border-radius: 6rpx;
+  display: block;
+}
+
+.gif-black{  
+  mix-blend-mode: screen;  
+}
+.gif-white{  
+  mix-blend-mode: multiply; 
 }

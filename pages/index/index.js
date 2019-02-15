@@ -1,13 +1,18 @@
 // pages/index/index.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
       front:'front',
       back:'back',
-      flip:'ee'
+      flip:'ee',
+      bagid:'0',
+      cardnames:[]
   },
 
   flipTap(){
@@ -72,7 +77,32 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    wx.getStorage({
+      key: 'bagid',
+      success: function(res) {
+        that.setData({
+          bagid:res.data
+        });
+        var tmpbagid = res.data;
+        var tmpurl = 'http://localhost:8080/CardCollect_server_war_exploded/ShowCardInfo?bagid=' + tmpbagid;
+        wx.request({
+          url: tmpurl,
+          method: 'GET',
+          header: {
+            //设置参数内容类型为json
+            'content-type': 'application/json'
+          },
+          success: function (res) {
+            that.setData({
+              cardnames:res.data.cardinfo
+            });
+            console.log(that.data.cardnames);
+          }
+        });
+      },
+    });
+    
   },
 
   /**
