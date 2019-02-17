@@ -19,7 +19,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/CardCollect_server_war_exploded/ShowCard',
+      url: 'https://pokerin.top/cardcollect_server/ShowCard',
       header: {
         'content-type': 'application/json' // 默认值
       },

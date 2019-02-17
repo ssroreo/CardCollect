@@ -85,7 +85,7 @@ Page({
           bagid:res.data
         });
         var tmpbagid = res.data;
-        var tmpurl = 'http://localhost:8080/CardCollect_server_war_exploded/ShowCardInfo?bagid=' + tmpbagid;
+        var tmpurl = 'https://pokerin.top/cardcollect_server/ShowCardInfo?bagid=' + tmpbagid;
         wx.request({
           url: tmpurl,
           method: 'GET',

@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.5.2",
-	"appid": "wxf7659237907c3512",
+	"appid": "wx9258303cdeed8b25",
 	"projectname": "CardCollect",
 	"debugOptions": {
 		"hidedInDevtools": []
